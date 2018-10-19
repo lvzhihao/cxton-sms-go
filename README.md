@@ -9,3 +9,9 @@ b, err := client.SendStrongUTF8(&ctxonsms.Strong{
     Content: "content",
 })
 ```
+
+# 余额查询
+```
+c := cxtonsms.NewClient("http://xxx.xxx.xxx.xxx", "name", "passwd")
+b, err := client.GetBalanceUTF8(nil)
+```
