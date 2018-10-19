@@ -99,6 +99,10 @@ func (c *Client) request(action string, ctx interface{}) (*http.Request, error) 
 		for k, v := range ctx.(map[string]interface{}) {
 			p.Set(k, goutils.ToString(v))
 		}
+	case map[string]string:
+		for k, v := range ctx.(map[string]string) {
+			p.Set(k, v)
+		}
 	default:
 		if _, ok := ctx.(Api); ok {
 			var maps map[string]string
