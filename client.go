@@ -171,6 +171,16 @@ func (c *Client) SendStrongUTF8(strong *Strong) ([]byte, error) {
 	return c.Action("eums/utf8/send_strong.do", strong)
 }
 
+// 查询余额
+func (c *Client) GetBalanceGBK(balance *Balance) ([]byte, error) {
+	return c.Action("eums/balance_strong.do", balance)
+}
+
+// 查询余额 utf8
+func (c *Client) GetBalanceUTF8(balance *Balance) ([]byte, error) {
+	return c.Action("eums/utf8/balance_strong.do", balance)
+}
+
 type Header struct {
 	Name     string // 帐号，由网关分配
 	Password string // 密码

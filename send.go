@@ -29,3 +29,11 @@ func (c *Strong) Map() (map[string]string, error) {
 	}
 	return maps, nil
 }
+
+type Balance struct {
+	Api
+}
+
+func (c *Balance) Map() (map[string]string, error) {
+	return make(map[string]string, 0), nil
+}
